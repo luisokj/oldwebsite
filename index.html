@@ -1,0 +1,208 @@
+<!DOCTYPE>
+<html lang="en-US">
+    <head>
+    <title>Learning CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html { 
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            box-sizing:border-box;}
+        
+            *, *:before, *:after{
+           -webkit-box-sizing:inherit;
+            -moz-box-sizing:inherit;
+            box-sizing:inherit;} 
+           
+            img {
+                max-width: 100%;
+                height:auto;
+                padding: 20px;
+                }           
+ 
+
+            }
+
+.container{
+           display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 1200px;
+    margin:0 auto;
+    grid-gap: 1em;
+    grid-template-areas:
+        "search"
+        "header"
+        "cart"
+        "deal1"
+        "deal2"
+        "deal3"
+        "nav"
+        "img"
+        "about"
+        "new"
+        "product1"
+        "product2"
+        "product3"
+        "product4"
+        "footer"
+        ;
+            }
+            
+            header{
+                grid-area:header;
+                padding-bottom: 50px;
+            }
+            .search{
+                grid-area: search;
+                padding-bottom: 50px;
+            }
+            .cart{
+                grid-area: cart;
+                padding-bottom: 50px;
+            }
+            .deal1{
+                grid-area: deal1;
+            }
+            .deal2{
+                grid-area: deal2;
+            }
+            .deal3{
+                grid-area: deal3;
+            }
+            nav{
+                grid-area: nav;
+                background-color: lightcyan;
+                display: flex;
+                justify-content: center;
+                align-items: 
+            }
+            .img{
+                grid-area: img;
+                padding: 0px;
+                
+            }
+           .about{
+                grid-area: about;
+               padding: 70px;
+            }
+            .new{
+                grid-area: new;
+                padding-top: 40px
+            }
+            .product1{
+                grid-area: product1;
+            }
+            .product2{
+                grid-area: product2;
+            }
+            .product3{
+                grid-area: product3;
+            }
+            .product4{
+                grid-area: product4;
+            }
+            .social2{
+                grid-area: social2;
+            }
+            .social3{
+                grid-area: social3;
+            }
+            .social4{
+                grid-area: social4;
+            }
+            footer{
+                grid-area: footer;
+            }
+            
+            .inlineList li {
+                display: inline;
+                margin-left: 168px;
+                }
+            h3{
+                color:black;
+            }
+            h1{
+                color: black
+            }
+  @media only screen and (min-width:620px){
+   .container{
+           display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    grid-template-areas:
+        "search search header header cart cart"
+        "nav nav nav nav nav nav"
+        "deal3 deal3 deal1 deal1 deal2 deal2"
+        "img img img img img img"
+        "about about about new new new"
+         "product1 product1 product1 product2 product2 product2"
+         "product3 product3 product3 product4 product4 product4"
+        "footer footer footer footer footer footer"
+        ;   
+            }
+ @media only screen and (min-width:900px){
+     .container{
+     display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    grid-template-areas:
+        "search search search search header header header header cart cart cart cart"
+        "deal3 deal3 deal3 deal3 deal1 deal1 deal1 deal1 deal2 deal2 deal2 deal2"
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "img img img img img img img img img img img img"
+        "about about about about about about about about about new new new"
+        "product1 product1 product1 product2 product2 product2 product3 product3 product3 product4 product4 product4"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+    
+        ;   
+            }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        <div> <a href="index.html"><img src="images/inmotionlogo.png" alt="Logo"></a> </div></header>
+        <div class="search">
+        <img src="images/search.png" alt="Search"></div>
+        <div class="cart">
+         <img src="images/cart.png" alt="Cart"></div>
+        <div class="deal1">
+          <img src="images/deal3.png" alt="Deal3">
+        </div>
+        <div class="deal2">
+        <img src="images/deal2.png" alt="Deal2"></div>
+        <div class="deal3">
+        <img src="images/promo1.png" alt="Deal1"></div>
+        <nav>
+   
+  <h3>
+    <ul class="inlineList">
+    <li><a href="product1.html">Women</a></li>
+    <li><a href="product2.html">Men</a></li>
+    <li><a>Girls</a></li>
+    <li><a>Collection</a></li>
+        <li><a href="policy.html">Policy</a></li>
+      </ul></h3></nav>
+        <div class="img">
+        <img src="images/img.jpg" alt="In Motion Athletics" class="center"></div>
+        <div class="about">
+            <h1>Hi! We are an athletic clothing company that believes in putting you first.  We do our best to maintain quality products within a reasonable price range.  We strive to find the best fabrics to enhance your workout experience and give you maximum breathability.  Follow us on twitter and instagram to see our customers just like you raving about InMotion Clothes.</h1>  </div>
+        <div class="new">
+        <img src="images/new.jpg" alt="New"></div>
+        <div class="product1">
+         <img src="images/product1.png" alt="PRODUCT1"></div>
+        <div class="product2">
+         <img src="images/product2.png" alt="PRODUCT2"></div>
+        <div class="product3">
+         <img src="images/product3.png" alt="PRODUCT3"></div>
+         <div class="product4">
+         <img src="images/product4.png" alt="PRODUCT4"></div>
+        <footer>
+            <img src="images/footer.png" alt="footer">
+        </footer>
+     </div>
+</body>
+</html>
